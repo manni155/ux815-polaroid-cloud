@@ -1,4 +1,115 @@
-/* Add screen styles below */
-a.active {
-    font-weight: bold;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+:root {
+    --main-bg-color: #e9e9e9;
+    --primary-text-color: #424242;
+    --accent-color: #ff3f3c;
+    --form-background: #D6D7D6;
+    --main-font: 1.92em;
+}
+
+body {
+    background: var(--main-bg-color);
+    color: var(--primary-text-color);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/*Shouldn't h1 be bold while the rest of the headings are black? Videos had us only import normal and black weights so I will be leaving it at weight 400 */
+
+main {
+    background: url(polaroid.png) no-repeat center 100px;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.hero {
+    text-align: center;
+    min-height: 800px;
+}
+
+.hero h2 {
+    font-size: 9em;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 200px 0;
+}
+
+.details ul {
+    margin: 0;
+    padding: 0;
+}
+
+.details ul li {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0 0 0 80px;
+    font-size: var(--main-font)
+}
+
+.details ul li.wifi {
+    background: url(wifi-solid.svg) no-repeat center left;
+}
+
+.details ul li.cloud {
+    background: url(cloud-arrow-up-solid.svg) no-repeat center left;
+}
+
+.details ul li.qr {
+    background: url(qrcode-solid.svg) no-repeat center left;
+}
+
+.details ul li.photo {
+    background: url(photo-film-solid.svg) no-repeat center left;
+}
+
+main h3 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.details p {
+    font-size: var(--main-font);
+}
+
+form {
+    background-color: var(--form-background);
+    border-radius: 40px;
+    padding: 35px;
+}
+
+input[type="button"]{
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+    height: 96px;
+    width: 26%;
+    font-size: 1.3em;
+    font-weight: 900;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    border: none;
+    margin-left: 10px;
+}
+
+input[type="text"] {
+    height: 96px;
+    font-size: 1.3em;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+    padding-left: 20px;
+    background-color: var(--main-bg-color);
+    border: none;
 }
